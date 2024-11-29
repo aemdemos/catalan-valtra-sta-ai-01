@@ -29,13 +29,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* Ensure logo and link are stacked vertically */
-.aitext4-wrapper .aitext4.block p:first-of-type {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Adjust the spacing between the paragraphs */
@@ -43,10 +38,11 @@
   margin: 5px 0; /* Adjust the margin as needed for spacing */
 }
 
-/* Adjust the spacing specifically for the link below the logo */
+/* Ensure logo and link are stacked vertically */
 .aitext4-wrapper .aitext4.block p:first-of-type {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Style the links */
