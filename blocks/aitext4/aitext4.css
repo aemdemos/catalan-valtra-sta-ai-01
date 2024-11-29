@@ -1,0 +1,66 @@
+
+/* Ensure the wrapper takes up the full width and has a dark background */
+.aitext4-wrapper {
+  background-color: #000; /* Dark background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Center the block content and ensure it stacks vertically */
+.aitext4-wrapper .aitext4.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* Set text color to white */
+}
+
+/* Ensure the inner content is centered and properly aligned */
+.aitext4-wrapper .aitext4.block > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Center the logo and the link below it */
+.aitext4-wrapper .aitext4.block > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensure logo and link are stacked vertically */
+.aitext4-wrapper .aitext4.block p:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adjust the spacing between the paragraphs */
+.aitext4-wrapper .aitext4.block p {
+  margin: 5px 0; /* Adjust the margin as needed for spacing */
+}
+
+/* Adjust the spacing specifically for the link below the logo */
+.aitext4-wrapper .aitext4.block p:first-of-type {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style the links */
+.aitext4-wrapper .aitext4.block a {
+  color: #fff; /* Ensure links are white */
+  text-decoration: none;
+}
+
+.aitext4-wrapper .aitext4.block a:hover {
+  text-decoration: underline;
+}
+
+/* To allow the block to span the entire width of the page without padding */
+.aitext4-container > .aitext4-wrapper {
+  max-width: unset;
+  padding: 0;
+}
