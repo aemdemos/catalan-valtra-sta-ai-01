@@ -34,12 +34,12 @@
 }
 
 .aicards2-wrapper .aicards2-card-body h3 {
-  margin: 0 0 10px 0; /* Add margin below the header */
+  margin: 0 0 10px; /* Add margin below the header */
   color: var(--text-color); /* Change text color to black */
 }
 
 .aicards2-wrapper .aicards2-card-body p {
-  margin: 0 0 10px 0; /* Add margin below the paragraph */
+  margin: 0 0 10px; /* Add margin below the paragraph */
   color: #666; /* Softer color for paragraph text */
 }
 
@@ -48,9 +48,8 @@
   padding: 0;
   margin: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px; /* Reduce spacing between tags */
-  flex-direction: row; /* Ensure tags are side by side */
+  flex-flow: row wrap;
+  gap: 5px; /* Reduce spacing between tags */ /* Ensure tags are side by side */
 }
 
 .aicards2-wrapper .aicards2-card-body ul li {

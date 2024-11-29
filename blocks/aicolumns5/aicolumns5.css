@@ -50,7 +50,7 @@
   text-decoration: underline;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .aicolumns5 > div {
     gap: 0; /* Remove the gap for larger screens */
   }

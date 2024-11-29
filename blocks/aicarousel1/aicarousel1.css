@@ -140,5 +140,5 @@
 .aicarousel1 .aicarousel1-slide-indicator {
     width: 32px; /* Increase size for better visibility */
     height: 32px;
-    background-color: rgba(0, 0, 0, 0.5); /* Increase contrast */
+    background-color: rgb(0 0 0 / 50%); /* Increase contrast */
 }

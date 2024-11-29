@@ -15,7 +15,7 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   .aicolumns4-wrapper > .aicolumns4 > div {
     gap: 24px; /* Adjust the gap between icons as needed */
   }
