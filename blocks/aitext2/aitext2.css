@@ -1,0 +1,33 @@
+
+.aitext2-wrapper {
+    width: 100%;
+    height: 100px; /* Ensure the block has a height */
+    background-color: gray; /* Set the background color as gray */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.aitext2-wrapper > .aitext2 {
+    display: flex;
+    flex-direction: row; /* Ensure the elements are side by side */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0; /* Make the text elements fully transparent */
+}
+
+.aitext2-wrapper > .aitext2 > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Ensure text elements are fully transparent */
+}
+
+/* If the block should span the entire width of the page */
+.aitext2-container > .aitext2-wrapper {
+    max-width: unset;
+    padding: 0;
+}

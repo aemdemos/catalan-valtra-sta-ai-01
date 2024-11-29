@@ -1,0 +1,51 @@
+
+.aitext3-wrapper {
+    background-color: #000; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust as needed */
+}
+
+.aitext3-wrapper > .block.aitext3 > div > div {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    justify-content: center;
+    align-items: center;
+}
+
+.aitext3-wrapper ul {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    gap: 40px; /* Adjust spacing as needed */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.aitext3-wrapper li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aitext3-wrapper picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px; /* Adjust icon container size as needed */
+    height: 32px; /* Adjust icon container size as needed */
+}
+
+.aitext3-wrapper img {
+    width: 100%; /* Make the icon size fill the container */
+    height: 100%; /* Make the icon size fill the container */
+    filter: brightness(0) invert(1); /* Make the icons white */
+    display: block; /* Ensure images do not have extra space below */
+    vertical-align: middle; /* Align icons vertically */
+}
+
+.aitext3-container > .aitext3-wrapper {
+    max-width: unset;
+    padding: 0;
+}

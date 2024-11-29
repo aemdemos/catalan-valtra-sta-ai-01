@@ -1,0 +1,26 @@
+
+.aicolumns4-wrapper > .aicolumns4 > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between icons as needed */
+}
+
+.aicolumns4-wrapper > .aicolumns4 > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(33.33% - 20px); /* Ensures three items per row with flexible spacing */
+  height: 100px; /* Adjust the size of the icon containers as needed */
+  box-sizing: border-box;
+}
+
+@media (min-width: 900px) {
+  .aicolumns4-wrapper > .aicolumns4 > div {
+    gap: 24px; /* Adjust the gap between icons as needed */
+  }
+
+  .aicolumns4-wrapper > .aicolumns4 > div > div {
+    width: calc(33.33% - 24px); /* Ensures three items per row with flexible spacing */
+  }
+}

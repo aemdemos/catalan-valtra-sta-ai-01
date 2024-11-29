@@ -1,0 +1,75 @@
+
+.aicards2-wrapper .aicards2.block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust gap for tighter spacing */
+}
+
+.aicards2-wrapper .aicards2.block ul > li {
+  flex: 1 1 calc(33.333% - 20px); /* Ensure three columns with equal spacing */
+  border: 1px solid #ddd; /* Darker border color */
+  background-color: #fff; /* White background */
+  border-radius: 5px; /* Slight border radius */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+.aicards2-wrapper .aicards2-card-image {
+  width: 100%;
+}
+
+.aicards2-wrapper .aicards2-card-image picture,
+.aicards2-wrapper .aicards2-card-image img {
+  width: 100%;
+  height: auto; /* Maintain natural aspect ratio */
+  display: block;
+}
+
+.aicards2-wrapper .aicards2-card-body {
+  padding: 15px; /* Increased padding */
+}
+
+.aicards2-wrapper .aicards2-card-body h3 {
+  margin: 0 0 10px 0; /* Add margin below the header */
+  color: var(--text-color); /* Change text color to black */
+}
+
+.aicards2-wrapper .aicards2-card-body p {
+  margin: 0 0 10px 0; /* Add margin below the paragraph */
+  color: #666; /* Softer color for paragraph text */
+}
+
+.aicards2-wrapper .aicards2-card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Reduce spacing between tags */
+  flex-direction: row; /* Ensure tags are side by side */
+}
+
+.aicards2-wrapper .aicards2-card-body ul li {
+  background: #f0f0f0; /* Light background for tags */
+  padding: 2px 6px; /* Adjust padding for tags to make them more compact */
+  border-radius: 3px;
+  font-size: 0.875rem;
+  border: none; /* Remove border to match original styling */
+  display: inline-flex;
+  align-items: center; /* Ensure vertical alignment */
+}
+
+/* Additional CSS to override default link color and button styles */
+.aicards2-wrapper .aicards2.block a {
+  color: var(--text-color); /* Override link color to black */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.aicards2-wrapper .aicards2.block a:hover {
+  color: var(--link-hover-color); /* Change hover color to match original */
+  text-decoration: underline; /* Add underline on hover */
+}

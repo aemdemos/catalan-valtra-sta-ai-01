@@ -1,0 +1,76 @@
+
+.aicolumns1-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack top section and bottom bar vertically */
+}
+
+.aicolumns1 > div {
+  display: flex;
+  justify-content: space-between; /* Distribute space between the cards */
+  gap: 0; /* Remove gap between the cards */
+  flex-direction: row; /* Ensure elements are side by side horizontally */
+}
+
+.aicolumns1 > div > div {
+  flex: 1; /* Each card takes equal space */
+  text-align: center; /* Center align the content in each card */
+  border-right: 1px solid #e0e0e0; /* Add a right border to each card for separation */
+  padding: 0 10px; /* Reduce padding inside each card */
+  display: flex;
+  flex-direction: column; /* Ensure elements inside each card are stacked vertically */
+  align-items: center; /* Center align items horizontally */
+}
+
+.aicolumns1 > div > div:last-child {
+  border-right: none; /* Remove right border for the last card */
+}
+
+.aicolumns1 h3 {
+  margin-bottom: 3px; /* Reduce margin below the title */
+}
+
+.aicolumns1 h3 a {
+  color: red; /* Change title color to red */
+  font-weight: bold; /* Make title bold */
+  font-size: 1.1em; /* Ensure font size matches original */
+}
+
+.aicolumns1 .button-container {
+  margin-bottom: 3px; /* Reduce margin below the button */
+}
+
+.aicolumns1 .button-container a {
+  background-color: red; /* Change button background color to red */
+  color: white; /* Change button text color to white */
+  padding: 4px 8px; /* Adjust padding for the buttons */
+  border-radius: 3px; /* Add border radius for the buttons */
+  text-transform: uppercase; /* Make button text uppercase */
+  font-size: 0.9em; /* Ensure font size matches original */
+}
+
+.aicolumns1 img {
+  width: auto; /* Ensure images are not stretched */
+  height: auto; /* Ensure images maintain aspect ratio */
+  max-width: 95px; /* Set a maximum width for the images */
+  margin: 5px 0; /* Add margin to create space above and below the images */
+}
+
+.bottom-bar {
+  background-color: #ccc; /* Grey background color */
+  display: flex;
+  justify-content: space-between; /* Space between left text and right button */
+  align-items: center; /* Vertically center the content */
+  padding: 10px;
+}
+
+.bottom-bar .left-text {
+  font-weight: bold;
+}
+
+.bottom-bar .right-button {
+  background-color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}

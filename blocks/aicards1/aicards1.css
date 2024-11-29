@@ -1,0 +1,72 @@
+
+.aicards1-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap as needed */
+}
+
+.aicards1-wrapper > .aicards1 > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.aicards1-wrapper > .aicards1 > ul > li {
+  flex: 1 1 calc(33.333% - 32px); /* 3 columns with gaps */
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color);
+  border: 1px solid #e0e0e0; /* Subtle border color */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  padding: 16px; /* Increased padding inside each card */
+}
+
+.aicards1-wrapper .aicards1-card-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px; /* Space between image and content */
+}
+
+.aicards1-wrapper .aicards1-card-image picture {
+  width: 100%;
+  height: auto;
+}
+
+.aicards1-wrapper .aicards1-card-body {
+  padding: 0; /* Reset padding inside the card body */
+}
+
+.aicards1-wrapper .aicards1-card-body h3,
+.aicards1-wrapper .aicards1-card-body h3 a {
+  color: var(--text-color);
+  margin: 16px 0; /* Space between title and tags */
+  font-size: 1.2em;
+}
+
+.aicards1-wrapper .aicards1-card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Reduced gap between tags */
+}
+
+.aicards1-wrapper .aicards1-card-body ul li {
+  background: #eee; /* Background for tags */
+  padding: 4px 8px; /* Smaller padding for more compact tags */
+  border-radius: 12px;
+  font-size: 0.75em; /* Smaller font size for tags */
+}
+
+.aicards1-wrapper > .aicards1 > ul > li img {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Maintain consistent aspect ratio */
+  object-fit: cover;
+  margin-bottom: 16px; /* Space between image and content */
+}

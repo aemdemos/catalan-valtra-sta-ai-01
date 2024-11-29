@@ -1,0 +1,144 @@
+
+.aicarousel1-wrapper {
+    position: relative;
+}
+
+/* Container styling */
+.aicarousel1 .aicarousel1-slides-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Navigation Buttons */
+.aicarousel1 .aicarousel1-navigation-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+/* Slide List */
+.aicarousel1 .aicarousel1-slides {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+/* Each Slide */
+.aicarousel1 .aicarousel1-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: row; /* Ensure content is side-by-side */
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Hide Picture Element */
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-image picture {
+    display: none;
+}
+
+.aicarousel1 .aicarousel1-slide:nth-child(1) {
+    background-image: url('./media_15493f876e39d099080650a7baf0883267270f950.jpeg?width=2000&format=webply&optimize=medium');
+}
+
+.aicarousel1 .aicarousel1-slide:nth-child(2) {
+    background-image: url('./media_19521302713875e8fd4173ffe0007cc8b24196039.jpeg?width=2000&format=webply&optimize=medium');
+}
+
+/* Add similar rules for other slides */
+
+/* Slide Content */
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content {
+    z-index: 2;
+    padding: 20px;
+    color: white;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 50%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; /* Ensure vertical centering */
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h1,
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h2 {
+    font-size: 3em; /* Increase font size */
+    font-weight: bold; /* Make the font weight bolder */
+    line-height: 1.2;
+    margin: 0;
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h1 {
+    margin-bottom: 0.5em; /* Add margin between h1 and h2 */
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h2 {
+    margin-top: 0;
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content .button-container {
+    margin-top: 20px; /* Adjust margin-top for better positioning */
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content .button {
+    background-color: red;
+    color: white;
+    padding: 20px 30px; /* Increase padding */
+    text-decoration: none;
+    border-radius: 10px; /* Increase border-radius */
+    font-family: var(--body-font-family);
+    font-weight: 500;
+    position: relative;
+    left: -10px; /* Adjust position to match original image */
+}
+
+/* Slide Indicators */
+.aicarousel1 .aicarousel1-slide-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.aicarousel1 .aicarousel1-slide-indicator button {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #dadada;
+    transition: background-color 0.2s;
+}
+
+.aicarousel1 .aicarousel1-slide-indicator button:disabled,
+.aicarousel1 .aicarousel1-slide-indicator button:hover,
+.aicarousel1 .aicarousel1-slide-indicator button:focus-visible {
+    background-color: var(--text-color);
+}
+
+.aicarousel1 .aicarousel1-slide-indicator {
+    width: 32px; /* Increase size for better visibility */
+    height: 32px;
+    background-color: rgba(0, 0, 0, 0.5); /* Increase contrast */
+}

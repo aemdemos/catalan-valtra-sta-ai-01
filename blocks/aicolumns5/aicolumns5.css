@@ -1,0 +1,62 @@
+
+.aicolumns5-wrapper {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 20px;
+}
+
+.aicolumns5 > div {
+  display: flex;
+  flex-direction: row; /* Ensure columns are side by side */
+  justify-content: space-between; /* Evenly space out the columns */
+  align-items: flex-start; /* Align items to the top */
+}
+
+.aicolumns5 > div > div {
+  flex: 1; /* Flex-grow to ensure equal width columns */
+  padding: 0 15px; /* Adjust padding for tighter spacing */
+  box-sizing: border-box;
+  border-left: 1px solid #333; /* Vertical line between columns */
+}
+
+.aicolumns5 > div > div:first-child {
+  border-left: none; /* No line on the first column */
+}
+
+.aicolumns5-wrapper h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.aicolumns5-wrapper p, .aicolumns5-wrapper ul {
+  margin: 5px 0;
+}
+
+.aicolumns5-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.aicolumns5-wrapper li {
+  margin: 5px 0;
+}
+
+.aicolumns5-wrapper a {
+  color: #fff; /* Ensure links are white */
+  text-decoration: none;
+}
+
+.aicolumns5-wrapper a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .aicolumns5 > div {
+    gap: 0; /* Remove the gap for larger screens */
+  }
+
+  .aicolumns5 > div > div {
+    flex: 1; /* Ensure columns are equal width */
+    padding: 0 15px; /* Adjust padding for tighter spacing */
+  }
+}

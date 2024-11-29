@@ -1,0 +1,53 @@
+
+/* Ensure the block occupies the full width of the viewport */
+.aihero1-container > .aihero1-wrapper {
+  width: 100%;
+  padding: 0;
+}
+
+.aihero1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the start horizontally */
+  background: url('./media_11ab6b4a2da75e897ef68eff7f92ac9dfedd43ab8.jpeg?width=2000&amp;format=jpeg&amp;optimize=medium') no-repeat center center;
+  background-size: cover;
+  height: 500px; /* Set the height to match the image height */
+  box-sizing: border-box;
+}
+
+.aihero1 > div {
+  display: flex;
+  flex-direction: row; /* Ensure elements are side by side */
+  justify-content: flex-start; /* Align content to the start horizontally */
+  align-items: center; /* Center the content vertically */
+  width: 100%;
+}
+
+.aihero1 > div:first-child {
+  flex: 1; /* Ensure the first div takes up available space */
+  display: none; /* Hide the picture div as the background image is used */
+}
+
+.aihero1 > div:last-child {
+  flex: 1; /* Ensure the second div takes up available space */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content within the div */
+  align-items: flex-start; /* Align items to the start */
+  text-align: left; /* Align the text to the left */
+  padding: 0 40px; /* Add padding to the left and right */
+}
+
+.aihero1 h2, .aihero1 .button-container {
+  margin: 10px 0;
+}
+
+.aihero1 .button-container .button {
+  background-color: red; /* Change button color to red */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}

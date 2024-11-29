@@ -1,0 +1,50 @@
+
+.aitexthighlight-wrapper {
+  background-color: #d0021b; /* Red background */
+  padding: 20px; /* Optional padding for spacing */
+  max-width: unset; /* Ensure content spans the entire width */
+}
+
+.aitexthighlight-wrapper > .block.aitexthighlight > div {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Ensure elements are side by side */
+}
+
+.aitexthighlight-wrapper > .block.aitexthighlight > div > div {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Ensure elements are side by side */
+  position: relative; /* Necessary for proper positioning of the vertical divider */
+}
+
+.aitexthighlight-wrapper > .block.aitexthighlight > div > div::before {
+  content: '';
+  width: 2px; /* Width of the vertical divider */
+  height: 100%; /* Height of the vertical divider */
+  background-color: white; /* Color of the vertical divider */
+  margin-right: 20px; /* Space between the divider and the text */
+  position: absolute;
+  left: 0; /* Adjust position closer to the text */
+}
+
+.aitexthighlight-wrapper > .block.aitexthighlight h2 {
+  color: white; /* White text color */
+  margin: 0; /* Remove default margin */
+  padding-right: 30px; /* Add padding to the right to increase space between text and button */
+}
+
+.aitexthighlight-wrapper > .block.aitexthighlight .button-container {
+  margin-left: 30px; /* Increase space between the text and the button */
+}
+
+.aitexthighlight-wrapper > .block.aitexthighlight .button {
+  display: inline-block;
+  background-color: black; /* Black button background */
+  color: white; /* White button text */
+  padding: 12px 24px; /* Adjust padding for better button size */
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from the link */
+  position: relative;
+  top: 5px; /* Slightly lower the button for better alignment */
+}
