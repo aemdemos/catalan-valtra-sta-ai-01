@@ -1,115 +1,107 @@
 
-.aicarousel1-wrapper {
-  position: relative;
+.aicarousel1-wrapper .aicarousel1 {
   width: 100%;
+  height: 100vh; /* Full viewport height */
+  position: relative;
   overflow: hidden;
 }
 
-.aicarousel1 .aicarousel1-slides-container {
-  position: relative;
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slides-container {
+  width: 100%;
+  height: 100%;
 }
 
-.aicarousel1 .aicarousel1-slides {
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slides {
   display: flex;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  flex-direction: row; /* Ensure slides are side by side */
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-.aicarousel1 .aicarousel1-slide {
-  position: relative;
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide {
   flex: 0 0 100%;
-  scroll-snap-align: start;
   display: flex;
-  align-items: center; /* Align items to the center vertically */
-  justify-content: flex-start; /* Align items to the left */
-  height: 100vh; /* Adjust based on your design needs */
-}
-
-.aicarousel1 .aicarousel1-slide-image {
-  position: absolute;
+  flex-direction: row; /* Ensure image and content are side by side */
+  align-items: center; /* Vertically center the content */
+  position: relative;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+}
+
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-image {
+  flex: 1;
+  height: 100%;
   overflow: hidden;
 }
 
-.aicarousel1 .aicarousel1-slide-image img {
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-image picture {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
-.aicarousel1 .aicarousel1-slide-content {
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-image picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container without stretching */
+}
+
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content {
   position: absolute;
-  top: 10%; /* Position higher */
-  left: 5%;
+  top: 25%; /* Adjust top position */
+  left: 10%; /* Position content towards the left */
+  transform: translate(0, 0); /* Remove vertical translation */
   color: white;
-  text-align: left;
-  background-color: transparent; /* Remove background color */
-  margin: 0; /* Remove margins */
-  padding: 0; /* Remove paddings */
-  z-index: 1;
   display: flex;
-  flex-direction: column; /* Ensure text and button are stacked */
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
 }
 
-.aicarousel1 .aicarousel1-slide-content h1,
-.aicarousel1 .aicarousel1-slide-content h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 2em; /* Adjust based on your design needs */
-  line-height: 1.2; /* Reduce line-height */
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h1,
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h2 {
+  margin: 0 0 10px;
 }
 
-.aicarousel1 .button-container {
-  margin-top: 10px;
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content .button-container {
+  margin-top: 20px;
 }
 
-.aicarousel1 .button-container .button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: red; /* Change button color to red */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content .button-container .button {
+  background-color: red; /* Change button background color to red */
+  color: white; /* Ensure button text is white */
 }
 
-/* Pagination */
-.aicarousel1 .aicarousel1-slide-indicators {
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide-indicators {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 10px;
+  width: 100%;
   display: flex;
-  gap: 5px;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  background-color: transparent; /* Remove background */
 }
 
-.aicarousel1 .aicarousel1-slide-indicator button {
-  width: 10px; /* Adjust size */
-  height: 10px; /* Adjust size */
-  background-color: transparent;
-  border: 2px solid white;
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide-indicator button {
+  width: 8px; /* Adjust size */
+  height: 8px; /* Adjust size */
+  margin: 0 5px;
   border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.aicarousel1 .aicarousel1-slide-indicator button:disabled {
-  background-color: red; /* Active indicator color */
-}
-
-.aicarousel1 .aicarousel1-slide-indicator button:hover,
-.aicarousel1 .aicarousel1-slide-indicator button:focus-visible {
   background-color: white;
+  opacity: 0.5; /* Semi-transparent dots */
 }
 
-/* Hide Navigation Buttons */
-.aicarousel1 .aicarousel1-navigation-buttons {
-  display: none;
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide-indicator button:disabled {
+  opacity: 1; /* Highlight the active dot */
+}
+
+.aicarousel1-wrapper .aicarousel1 .aicarousel1-navigation-buttons {
+  display: none; /* Hide navigation buttons */
+}
+
+@media (width >= 600px) {
+  .aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content {
+    top: 20%; /* Adjust top position for larger screens */
+    left: 5%; /* Adjust left position for larger screens */
+  }
 }
