@@ -20,12 +20,6 @@
   padding: 0;
 }
 
-.aicards3-container > .aicards3-wrapper > .block.aicards3 .aicards3-card-image {
-  width: 100%;
-  line-height: 0;
-  position: relative; /* Ensure overlay positioning works correctly */
-}
-
 .aicards3-container > .aicards3-wrapper > .block.aicards3 > ul > li img {
   width: 100%;
   height: auto;
@@ -80,4 +74,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  line-height: 0;
+  position: relative; /* Ensure overlay positioning works correctly */
 }

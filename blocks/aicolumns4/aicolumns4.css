@@ -1,26 +1,27 @@
 
+.aicolumns4-wrapper > .aicolumns4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the grid horizontally */
+    align-items: center; /* Center the grid vertically */
+    gap: 20px 40px; /* Adjust the gap for consistent spacing */
+}
+
 .aicolumns4-wrapper > .aicolumns4 > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Adjust the gap between icons as needed */
+    display: flex;
+    flex-direction: row; /* Ensure the icons within each row are side by side */
+    justify-content: center; /* Center icons within each row */
+    width: 100%; /* Make sure rows take full width to align properly */
+    gap: 40px; /* Ensure equal spacing between icons */
 }
 
-.aicolumns4-wrapper > .aicolumns4 > div > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(33.33% - 20px); /* Ensures three items per row with flexible spacing */
-  height: 100px; /* Adjust the size of the icon containers as needed */
-  box-sizing: border-box;
+.aicolumns4-wrapper > .aicolumns4 > div > .aicolumns4-img-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (width >= 900px) {
-  .aicolumns4-wrapper > .aicolumns4 > div {
-    gap: 24px; /* Adjust the gap between icons as needed */
-  }
-
-  .aicolumns4-wrapper > .aicolumns4 > div > div {
-    width: calc(33.33% - 24px); /* Ensures three items per row with flexible spacing */
-  }
+.aicolumns4-wrapper > .aicolumns4 > div > .aicolumns4-img-col img {
+    width: auto; /* Ensure icons are not stretched */
+    height: 100px; /* Set a uniform height for the icons */
 }
