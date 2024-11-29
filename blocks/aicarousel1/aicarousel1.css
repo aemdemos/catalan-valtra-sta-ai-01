@@ -1,107 +1,117 @@
 
-.aicarousel1-wrapper .aicarousel1 {
+.aicarousel1-wrapper {
   width: 100%;
-  height: 100vh; /* Full viewport height */
   position: relative;
-  overflow: hidden;
 }
 
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slides-container {
-  width: 100%;
-  height: 100%;
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slides {
-  display: flex;
-  flex-direction: row; /* Ensure slides are side by side */
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide {
-  flex: 0 0 100%;
-  display: flex;
-  flex-direction: row; /* Ensure image and content are side by side */
-  align-items: center; /* Vertically center the content */
+.aicarousel1 .aicarousel1-slides-container {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-image {
-  flex: 1;
-  height: 100%;
-  overflow: hidden;
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-image picture {
-  width: 100%;
-  height: 100%;
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-image picture > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container without stretching */
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content {
-  position: absolute;
-  top: 25%; /* Adjust top position */
-  left: 10%; /* Position content towards the left */
-  transform: translate(0, 0); /* Remove vertical translation */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the start */
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h1,
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h2 {
-  margin: 0 0 10px;
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content .button-container {
-  margin-top: 20px;
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content .button-container .button {
-  background-color: red; /* Change button background color to red */
-  color: white; /* Ensure button text is white */
-}
-
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide-indicators {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.aicarousel1 .aicarousel1-slides,
+.aicarousel1 .aicarousel1-slide-indicators {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide-indicator button {
-  width: 8px; /* Adjust size */
-  height: 8px; /* Adjust size */
-  margin: 0 5px;
-  border-radius: 50%;
-  background-color: white;
-  opacity: 0.5; /* Semi-transparent dots */
+.aicarousel1 .aicarousel1-slides {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
 }
 
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-slide-indicator button:disabled {
-  opacity: 1; /* Highlight the active dot */
+.aicarousel1 .aicarousel1-slides::-webkit-scrollbar {
+  display: none;
 }
 
-.aicarousel1-wrapper .aicarousel1 .aicarousel1-navigation-buttons {
+.aicarousel1 .aicarousel1-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: row; /* Ensure elements are side by side */
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  position: relative;
+  width: 100%;
+  min-height: min(50vw, calc(100dvh - var(--header-height)));
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-image {
+  flex: 1;
+  position: relative;
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content {
+  position: absolute;
+  left: 10%;
+  top: 45%;
+  transform: translateY(-50%); /* Center content vertically */
+  color: white;
+  text-align: left;
+  background-color: transparent; /* Remove background color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  z-index: 1;
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h1,
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content h2 {
+  margin: 0.5em 0;
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content .button-container {
+  margin-top: 1em;
+}
+
+.aicarousel1 .aicarousel1-slide .aicarousel1-slide-content .button {
+  background-color: red; /* Change button color to red */
+  color: white; /* Ensure text color is white */
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Navigation buttons for carousel */
+.aicarousel1 .aicarousel1-navigation-buttons {
   display: none; /* Hide navigation buttons */
 }
 
-@media (width >= 600px) {
-  .aicarousel1-wrapper .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content {
-    top: 20%; /* Adjust top position for larger screens */
-    left: 5%; /* Adjust left position for larger screens */
+/* Carousel indicators */
+.aicarousel1 .aicarousel1-slide-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.aicarousel1 .aicarousel1-slide-indicators button {
+  width: 10px;
+  height: 10px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.aicarousel1 .aicarousel1-slide-indicators button:disabled {
+  background-color: red; /* Change active indicator color to red */
+}
+
+@media (min-width: 600px) {
+  .aicarousel1 .aicarousel1-slide .aicarousel1-slide-content {
+    left: 10%;
+    top: 45%;
+    transform: translateY(-50%); /* Center content vertically */
+    width: auto; /* Adjust content width if necessary */
   }
 }
