@@ -1,0 +1,80 @@
+
+.aicards3-container > .aicards3-wrapper > .block.aicards3 > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.aicards3-container > .aicards3-wrapper > .block.aicards3 > ul > li {
+  position: relative;
+  flex: 1 1 calc(25% - 8px); /* Adjusts width and spacing */
+  margin: 0; /* Remove margin for close alignment */
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row; /* Ensures content inside li is side-by-side if necessary */
+  align-items: center;
+  padding: 0;
+}
+
+.aicards3-container > .aicards3-wrapper > .block.aicards3 > ul > li img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.aicards3-container > .aicards3-wrapper > .block.aicards3 .aicards3-card-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0; /* Remove margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aicards3-container > .aicards3-wrapper > .block.aicards3 .aicards3-card-body a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: transparent; /* Remove the button background */
+  border: none; /* Remove the button border */
+  padding: 0; /* Remove padding */
+  display: inline; /* Ensure the link does not behave like a block */
+}
+
+/* Remove default button styles */
+.aicards3-container > .aicards3-wrapper > .block.aicards3 .button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  text-transform: none;
+  box-shadow: none;
+}
+
+/* Ensuring minimal spacing between elements */
+.aicards3-container > .aicards3-wrapper > .block.aicards3 > ul > li + li {
+  margin-left: 0;
+}
+
+/* Fine-tuning the image container to ensure no extra space */
+.aicards3-container > .aicards3-wrapper > .block.aicards3 .aicards3-card-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  line-height: 0;
+  position: relative; /* Ensure overlay positioning works correctly */
+}

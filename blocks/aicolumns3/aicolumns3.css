@@ -1,0 +1,58 @@
+
+.aicolumns3-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aicolumns3-2-cols > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* Align the content at the top */
+}
+
+.aicolumns3-2-cols > div:first-child > div:first-child {
+  flex: 1;
+}
+
+.aicolumns3-2-cols > div:first-child > .button-container {
+  margin-left: auto; /* Align button to the far right */
+  padding-left: 20px; /* Ensure space between text and button */
+}
+
+.aicolumns3-2-cols > div:last-child > .aicolumns3-img-col {
+  flex: 1;
+  margin-right: 40px; /* Ensure proper spacing between image and text */
+}
+
+.aicolumns3-2-cols > div:last-child > div:last-child {
+  flex: 1;
+  margin-left: 40px; /* Ensure proper spacing between image and text */
+}
+
+/* Button Styling */
+.aicolumns3-wrapper .block.aicolumns3 .button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px; /* Add padding to make button size consistent */
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (width <= 768px) {
+  .aicolumns3-2-cols > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .aicolumns3-2-cols > div:first-child > .button-container {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .aicolumns3-2-cols > div:last-child > .aicolumns3-img-col {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

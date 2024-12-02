@@ -1,0 +1,36 @@
+
+.header-sep-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-sep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-sep::before, .header-sep::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: #000;
+  margin: 0 12px; /* Adjusted margin for balanced space between text and lines */
+  max-width: 400px; /* Increased max-width for longer lines */
+}
+
+.header-sep > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row; /* Ensure elements are side by side */
+}
+
+.header-sep h2 {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}

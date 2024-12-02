@@ -1,0 +1,46 @@
+
+.aitext2-wrapper {
+  background-color: #808080; /* Grey background */
+  padding: 10px; /* Optional padding */
+}
+
+.aitext2-wrapper .aitext2.block > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.aitext2-wrapper .aitext2.block p {
+  margin: 0; /* Remove default margin */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: #FFF; /* White text color for both "Dealer Locator" and "Back" */
+}
+
+.aitext2-wrapper .aitext2.block a {
+  color: #FFF; /* White text color for the link */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold;
+  margin-right: 20px; /* Space between the link and the "Back" text */
+}
+
+.aitext2-wrapper .aitext2.block p span {
+  margin-left: auto; /* Push the "Back" text to the right */
+  margin-right: 10px; /* Add space between "Back" text and the circle */
+}
+
+.aitext2-wrapper .aitext2.block p::after {
+  content: '↑'; /* Upward arrow */
+  width: 24px; /* Width of the circle */
+  height: 24px; /* Height of the circle */
+  background-color: #FFF; /* White background for the circle */
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px; /* Size of the arrow */
+  color: #808080; /* Grey color for the arrow */
+}
